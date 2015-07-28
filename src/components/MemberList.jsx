@@ -20,6 +20,9 @@ var MemberList = React.createClass({
     this.listenTo(MemberStore, () => {
       this.setState(this.getInitialState());
     });
+    $(React.findDOMNode(this.refs.input)).popup({
+      on: 'focus'
+    });
   },
 
   addMember() {

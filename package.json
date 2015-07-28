@@ -20,5 +20,9 @@
     "react": "^0.13.3",
     "reflux": "^0.2.7",
     "webpack": "^1.9.5"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.2.0",
+    "lodash": "^3.10.0"
   }
 }
