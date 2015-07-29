@@ -22,7 +22,12 @@
     "webpack": "^1.9.5"
   },
   "devDependencies": {
+    "chai": "^3.2.0",
     "karma-chrome-launcher": "^0.2.0",
-    "lodash": "^3.10.0"
+    "karma-mocha": "^0.2.0",
+    "lodash": "^3.10.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
   }
 }
