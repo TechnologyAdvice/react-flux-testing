@@ -2,12 +2,16 @@ module.exports = function(config) {
   config.set({
     browsers: [
       'PhantomJS',
-      //'Chrome'
+      'Chrome'
     ],
     files: [
       {
-        pattern: 'tests.webpack.js',
-        watched: false,
+        pattern: 'tests.mocha.webpack.js',
+        watched: false
+      },
+      {
+        pattern: './bower_components/lodash/lodash.js',
+        watched: false
       },
       {
         pattern: './bower_components/jquery/dist/jquery.js',
@@ -27,25 +31,25 @@ module.exports = function(config) {
     ],
     client: {
       mocha: {
-        reporter: 'html', // change Karma's debug.html to the mocha web reporter
+        reporter: 'html', // change Karma's debug.html to mocha web reporter
         ui: 'tdd'
       }
     },
     preprocessors: {
-      'tests.webpack.js': [
-        'webpack',
-      ],
+      'tests.mocha.webpack.js': [
+        'webpack'
+      ]
     },
     webpack: {
       module: {
         loaders: [
-          { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
-        ],
+          {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'}
+        ]
       },
-      watch: true,
+      watch: true
     },
     webpackServer: {
-      noInfo: true,
-    },
+      noInfo: true
+    }
   });
 };

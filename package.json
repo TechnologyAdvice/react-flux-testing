@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "test": "karma start karma.conf.js",
+    "mocha": "karma start karma.mocha.conf.js",
     "postinstall": "bower install"
   },
   "author": "Kenneth Chung",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "chai": "^3.2.0",
+    "jsx-loader": "^0.13.2",
     "karma-chrome-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
     "lodash": "^3.10.0",

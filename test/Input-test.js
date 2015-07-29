@@ -3,7 +3,7 @@ var renderedInput;
 
 var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
-var Input = require('../components/Input.js');
+var Input = require('../src/components/Input.js');
 
 describe('Input', function() {
 
@@ -44,7 +44,7 @@ describe('Input', function() {
 
   it('shows a popup on focus if data-content is given', function() {
     renderedInput = TestUtils.renderIntoDocument(<Input dataContent='Sample Popup' />);
-    spyOn(renderedInput.elm, 'popup');
+    //spyOn(renderedInput.elm, 'popup');
 
     var popoverInput = TestUtils.findRenderedDOMComponentWithTag(renderedInput, 'input');
     // TestUtils.Simulate.keyDown(popoverInput, {key: "4"});
@@ -65,8 +65,6 @@ describe('Input', function() {
     //   expect(renderedInput.elm.popup).toHaveBeenCalled();
     // });
     expect(renderedInput.elm.popup).not.toHaveBeenCalled();
-    jasmine.clock().tick(5000);
-    console.log('done ticking.');
     expect(renderedInput.elm.popup).toHaveBeenCalled();
     // expectAsync(renderedInput.elm.popup, function(result){
     //     result.toHaveBeenCalled();
