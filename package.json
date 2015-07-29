@@ -2,7 +2,8 @@
   "name": "react-flux-testing",
   "version": "0.0.0",
   "scripts": {
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "postinstall": "bower install"
   },
   "author": "Kenneth Chung",
   "dependencies": {
